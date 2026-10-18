@@ -1,13 +1,11 @@
-
 import 'package:flutter_test/flutter_test.dart';
 import 'package:lor_project/app.dart';
 
 void main() {
-  testWidgets('MyApp displays the login screen',
-      (WidgetTester tester) async {
-    await tester.pumpWidget(const MyApp());
+  testWidgets('App starts successfully', (WidgetTester tester) async {
+    await tester.pumpWidget(const PuvPassengerCountingApp());
 
-    expect(find.text('Welcome Back!'), findsOneWidget);
-    expect(find.text('Login'), findsOneWidget);
+    expect(find.text('Public Utility Vehicle\nPassenger Counting'),
+        findsOneWidget);
   });
 }
