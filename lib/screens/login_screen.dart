@@ -38,8 +38,6 @@ class _LoginScreenState extends State<LoginScreen> {
 
     Future.delayed(const Duration(milliseconds: 500), () {
       if (!mounted) return;
-
-      // The /dashboard route must exist in main.dart.
       Navigator.pushReplacementNamed(context, '/dashboard');
     });
   }
@@ -135,10 +133,10 @@ class _LoginScreenState extends State<LoginScreen> {
         children: [
           _logo(),
           const SizedBox(height: 64),
-          _eyebrow('SMART MOBILITY INTELLIGENCE'),
+          _eyebrow('IMAGE-BASED AI DETECTION'),
           const SizedBox(height: 20),
           const Text(
-            'Smarter\nPassenger\nMonitoring.',
+            'Smarter\nPassenger\nDetection.',
             style: TextStyle(
               color: _white,
               fontSize: 43,
@@ -149,8 +147,8 @@ class _LoginScreenState extends State<LoginScreen> {
           ),
           const SizedBox(height: 20),
           const Text(
-            'A clearer view of passenger movement through '
-            'computer vision and intelligent counting.',
+            'Detect and count passengers from uploaded PUV '
+            'images using computer vision and YOLO.',
             style: TextStyle(
               color: _muted,
               fontSize: 15,
@@ -189,7 +187,7 @@ class _LoginScreenState extends State<LoginScreen> {
           _logo(),
           const SizedBox(height: 25),
           const Text(
-            'Smarter Passenger Monitoring.',
+            'Image-Based Passenger Detection.',
             textAlign: TextAlign.center,
             style: TextStyle(
               color: _white,
@@ -199,7 +197,8 @@ class _LoginScreenState extends State<LoginScreen> {
           ),
           const SizedBox(height: 10),
           const Text(
-            'Computer vision for smarter public transportation.',
+            'Upload PUV images and use YOLO-based computer '
+            'vision to detect passengers.',
             textAlign: TextAlign.center,
             style: TextStyle(color: _muted, height: 1.6),
           ),
@@ -316,14 +315,14 @@ class _LoginScreenState extends State<LoginScreen> {
           Row(
             children: [
               const Icon(
-                Icons.radar_rounded,
+                Icons.image_search_rounded,
                 color: _teal,
                 size: 18,
               ),
               const SizedBox(width: 8),
               const Expanded(
                 child: Text(
-                  'VISION DETECTION SYSTEM',
+                  'IMAGE DETECTION SYSTEM',
                   style: TextStyle(
                     color: _muted,
                     fontSize: 9,
@@ -332,17 +331,14 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                 ),
               ),
-              Container(
-                width: 7,
-                height: 7,
-                decoration: const BoxDecoration(
-                  color: _teal,
-                  shape: BoxShape.circle,
-                ),
+              const Icon(
+                Icons.check_circle_outline_rounded,
+                color: _teal,
+                size: 14,
               ),
               const SizedBox(width: 5),
               const Text(
-                'READY',
+                'YOLO',
                 style: TextStyle(
                   color: _teal,
                   fontSize: 9,
@@ -373,7 +369,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      'PASSENGER TRACKING',
+                      'PASSENGER DETECTION',
                       style: TextStyle(
                         color: _muted,
                         fontSize: 9,
@@ -382,11 +378,12 @@ class _LoginScreenState extends State<LoginScreen> {
                     ),
                     SizedBox(height: 8),
                     Text(
-                      'Computer vision enabled',
+                      'Analyze uploaded PUV images',
                       style: TextStyle(
                         color: _white,
-                        fontSize: 13,
+                        fontSize: 12,
                         fontWeight: FontWeight.w700,
+                        height: 1.5,
                       ),
                     ),
                   ],
@@ -400,14 +397,14 @@ class _LoginScreenState extends State<LoginScreen> {
               Expanded(
                 child: _MiniStat(
                   value: 'YOLO',
-                  label: 'DETECTION',
+                  label: 'AI DETECTION',
                 ),
               ),
               SizedBox(width: 10),
               Expanded(
                 child: _MiniStat(
-                  value: 'LIVE',
-                  label: 'MONITORING',
+                  value: 'IMAGE',
+                  label: 'INPUT TYPE',
                 ),
               ),
             ],
