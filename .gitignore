@@ -46,3 +46,13 @@ app.*.map.json
 
 # Widget Preview related
 .widget_preview/
+
+
+# Environment variables and database credentials
+.env
+.env.*
+!.env.example
+# Local secrets and private configuration
+secrets/
+*.pem
+*.key
